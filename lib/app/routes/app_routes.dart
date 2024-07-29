@@ -11,7 +11,7 @@ abstract class Routes {
   static const REGISTER_SCREEN = _Paths.REGISTER_SCREEN;
   static const FORGET_PASSWORD_SCREEN = _Paths.FORGET_PASSWORD_SCREEN;
   static const BOTTOM_NAVIGATION_SCREEN = _Paths.BOTTOM_NAVIGATION_SCREEN;
-  static const CATEGORY_SCREEN = _Paths.CATEGORY_SCREEN;
+  static const CATEGORY_SCREEN = _Paths.STORE_SCREEN;
   static const CART_SCREEN = _Paths.CART_SCREEN;
   static const PROFILE_SCREEN = _Paths.PROFILE_SCREEN;
 }
@@ -26,7 +26,7 @@ abstract class _Paths {
   static const REGISTER_SCREEN = '/register-screen';
   static const FORGET_PASSWORD_SCREEN = '/forget-password-screen';
   static const BOTTOM_NAVIGATION_SCREEN = '/bottom-navigation-screen';
-  static const CATEGORY_SCREEN = '/category-screen';
+  static const STORE_SCREEN = '/store-screen';
   static const CART_SCREEN = '/cart-screen';
   static const PROFILE_SCREEN = '/profile-screen';
 }

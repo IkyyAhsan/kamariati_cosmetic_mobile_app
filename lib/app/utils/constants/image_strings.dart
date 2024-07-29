@@ -35,6 +35,7 @@ class KamariatiImages {
   static const String ikeaLogo = "assets/icons/brands/ikea_logo.png";
   static const String acerlogo = "assets/icons/brands/acer_logo.png";
   static const String wardahlogo = "assets/icons/brands/wardah-logo.png";
+  static const String somethinclogo = "assets/icons/brands/somethinc-logo.png";
 
   // -- Animations
   static const String productsIllustration = "assets/images/animations/sammy-line-workout.gif";

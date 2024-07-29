@@ -19,11 +19,11 @@ class ResetPassword extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
-          IconButton(onPressed: () => Get.back(), icon: Icon(FluentIcons.dismiss_20_regular))
+          IconButton(onPressed: () => Get.back(), icon: const Icon(FluentIcons.dismiss_20_regular))
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(KamariatiSizes.defaultSpace),
+        padding: const EdgeInsets.all(KamariatiSizes.defaultSpace),
         child: Column(
           children: [
             // Image

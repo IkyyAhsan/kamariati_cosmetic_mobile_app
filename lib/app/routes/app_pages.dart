@@ -1,11 +1,10 @@
 import 'package:get/get.dart';
-
 import '../modules/bottom_navigation_screen/bindings/bottom_navigation_screen_binding.dart';
 import '../modules/bottom_navigation_screen/views/bottom_navigation_screen_view.dart';
 import '../modules/cart_screen/bindings/cart_screen_binding.dart';
 import '../modules/cart_screen/views/cart_screen_view.dart';
-import '../modules/category_screen/bindings/category_screen_binding.dart';
-import '../modules/category_screen/views/store_screen_view.dart';
+import '../modules/store_screen/bindings/category_screen_binding.dart';
+import '../modules/store_screen/views/store_screen_view.dart';
 import '../modules/forget_password_screen/bindings/forget_password_screen_binding.dart';
 import '../modules/forget_password_screen/views/forget_password_screen_view.dart';
 import '../modules/home_screen/bindings/home_screen_binding.dart';
@@ -70,9 +69,9 @@ class AppPages {
       binding: BottomNavigationScreenBinding(),
     ),
     GetPage(
-      name: _Paths.CATEGORY_SCREEN,
+      name: _Paths.STORE_SCREEN,
       page: () => const StoreScreenView(),
-      binding: CategoryScreenBinding(),
+      binding: StoreScreenBinding(),
     ),
     GetPage(
       name: _Paths.CART_SCREEN,

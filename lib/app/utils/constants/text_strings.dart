@@ -68,7 +68,8 @@ class KamariatiTexts {
 
   // -- Product
   static const String popularCategory = "Kategori Populer";
-  static const String trendingProduct = "Produk Trending";
+  static const String trendingProduct = "Produk Populer";
+  static const String youMayAlsoLike = "Kamu mungkin juga suka";
 
   // -- Store
   static const String brandUnggulantitle = "Brand Unggulan";
@@ -91,7 +92,7 @@ class KamariatiTexts {
 
   // -- Product Name
   static const String nameProductImage1 = "Wardah Colorfit Fresh Lip Ink Serum";
-  static const String categoryNameProductImage1 = "Skincare";
+  static const String brandNameProductImage1 = "Wardah";
   static const String discountProductImage1 = "25%";
   static const String priceProductImage1 = "64.000";
 

@@ -1,6 +1,5 @@
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:kamariati_cosmetic_project/app/utils/constants/colors.dart';
 import 'package:kamariati_cosmetic_project/app/utils/constants/sizes.dart';
 import 'package:kamariati_cosmetic_project/app/utils/helpers/helper_functions.dart';

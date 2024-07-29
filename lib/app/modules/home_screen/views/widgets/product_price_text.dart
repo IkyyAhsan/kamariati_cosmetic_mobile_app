@@ -24,8 +24,8 @@ class KamariatiProductPriceText extends StatelessWidget {
       maxLines: maxLines,
       overflow: TextOverflow.ellipsis,
       style: isLarge 
-      ? GoogleFonts.plusJakartaSans(textStyle: Theme.of(context).textTheme.headlineMedium!.apply(decoration: lineThrough ? TextDecoration.lineThrough : null))
-      : GoogleFonts.plusJakartaSans(textStyle: Theme.of(context).textTheme.headlineMedium!.apply(decoration: lineThrough ? TextDecoration.lineThrough : null))
+      ? GoogleFonts.plusJakartaSans(textStyle: Theme.of(context).textTheme.headlineSmall!.apply(decoration: lineThrough ? TextDecoration.lineThrough : null))
+      : GoogleFonts.plusJakartaSans(textStyle: Theme.of(context).textTheme.headlineSmall!.apply(decoration: lineThrough ? TextDecoration.lineThrough : null))
     );
   }
 }

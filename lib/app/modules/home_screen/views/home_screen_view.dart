@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:kamariati_cosmetic_project/app/modules/cart_screen/views/cart_screen_view.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/controllers/widgets/banner_controller.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/appbar.dart';
+import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/curved_edges/primary_header_container.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/home_category.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/layout/grid_layout.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/product_cards/product_card_vertical.dart';
@@ -27,34 +28,46 @@ class HomeScreenView extends GetView<HomeScreenController> {
   Widget build(BuildContext context) {
     final dark = KamariatiHelperFunctions.isDarkMode(context);
     return Scaffold(
-      appBar: KamariatiAppBar(
-        showBackArrow: false,
-        title: SizedBox(
-          child: Text(
-            KamariatiTexts.homeAppbarTitle, 
-            style: GoogleFonts.plusJakartaSans(
-              textStyle: const TextStyle(
-                fontSize: 20, 
-                fontWeight: FontWeight.w900,
-              ),
-            ),
-          ),
-        ),
-        actions: [
-          IconButton(
-            onPressed: () => Get.to(() => const CartScreenView()), 
-            icon: const Icon(
-              FluentIcons.cart_24_regular,
-              size: 30,
-            )
-          )
-        ],
-      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // Search Bar
-            const KamariatiSearchBar(text: KamariatiTexts.homeSearchTitle, icon: FluentIcons.search_24_regular,),
+            // Header
+            KamariatiPrimaryHeaderContainer(
+              child: Column(
+                children: [
+                  // AppBar
+                  KamariatiAppBar(
+                    showBackArrow: false,
+                    title: SizedBox(
+                      child: Text(
+                        KamariatiTexts.homeAppbarTitle, 
+                        style: GoogleFonts.plusJakartaSans(
+                          textStyle: const TextStyle(
+                            color: KamariatiColors.light,
+                            fontSize: 20, 
+                            fontWeight: FontWeight.w900,
+                          ),
+                        ),
+                      ),
+                    ),
+                    actions: [
+                      IconButton(
+                        onPressed: () => Get.to(() => const CartScreenView()), 
+                        icon: const Icon(
+                          FluentIcons.cart_24_regular,
+                          color: KamariatiColors.light,
+                          size: 30,
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  // Search Bar
+                  const KamariatiSearchBar(text: KamariatiTexts.homeSearchTitle, icon: FluentIcons.search_24_regular,),
+                  verticalSpace(KamariatiSizes.spaceBtwSections),
+                ],
+              ),
+            ),
 
             // Promo Slider
             KamariatiPromoSlider(bannerController: bannerController),
@@ -104,4 +117,6 @@ class HomeScreenView extends GetView<HomeScreenController> {
     );
   }
 }
+
+
 

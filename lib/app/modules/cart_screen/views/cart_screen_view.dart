@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import '../controllers/cart_screen_controller.dart';
 
 class CartScreenView extends GetView<CartScreenController> {
-  const CartScreenView({Key? key}) : super(key: key);
+  const CartScreenView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

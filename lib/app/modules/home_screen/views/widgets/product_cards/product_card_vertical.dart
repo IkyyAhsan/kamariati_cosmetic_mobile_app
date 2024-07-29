@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/brand_title_text_with_verification_icon.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/product_price_text.dart';
-import 'package:kamariati_cosmetic_project/app/utils/constants/circular_icon.dart';
 import 'package:kamariati_cosmetic_project/app/utils/constants/colors.dart';
 import 'package:kamariati_cosmetic_project/app/utils/constants/image_strings.dart';
 import 'package:kamariati_cosmetic_project/app/utils/constants/product_title_text.dart';
@@ -62,12 +61,6 @@ class KamariatiProductCartVertical extends StatelessWidget {
                       child: Text(KamariatiTexts.discountProductImage1, style: GoogleFonts.plusJakartaSans(textStyle: Theme.of(context).textTheme.labelLarge!.apply(color: KamariatiColors.black)),),
                     ),
                   ),
-      
-                  /// -- Favourite Icon Button
-                  const Positioned(
-                    top: 0,
-                    right: 0,
-                    child: KamariatiCircularIcon(icon: FluentIcons.heart_24_filled, color: Colors.red,)),
                 ],
               ),
             ),
@@ -84,7 +77,7 @@ class KamariatiProductCartVertical extends StatelessWidget {
                     smallSize: true,
                   ),
                   verticalSpace(KamariatiSizes.spaceBtwItems / 2),
-                  const KamariatiBrandTitleWithVerificationIcon(title: KamariatiTexts.categoryNameProductImage1),
+                  const KamariatiBrandTitleWithVerificationIcon(title: KamariatiTexts.brandNameProductImage1),
                 ],
               ),
             ),

@@ -25,7 +25,7 @@ class KamariatiPromoSlider extends StatelessWidget {
               autoPlay: true,
               viewportFraction: 1,
               enlargeCenterPage: true,
-              height: 250,
+              height: 230,
               initialPage: 0,
               onPageChanged: (index, _) {
                 bannerController.carousalCurrentIndex.value = index;
@@ -52,7 +52,7 @@ class KamariatiPromoSlider extends StatelessWidget {
                     width: 20,
                     height: 4,
                     margin: const EdgeInsets.only(right: 10),
-                    color: bannerController.carousalCurrentIndex.value == i ? KamariatiColors.primary : KamariatiColors.accent,
+                    color: bannerController.carousalCurrentIndex.value == i ? KamariatiColors.accent : KamariatiColors.darkGrey,
                   )
               ],
             ),
