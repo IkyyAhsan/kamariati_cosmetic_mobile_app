@@ -19,7 +19,7 @@ class KamariatiTabBar extends StatelessWidget implements PreferredSizeWidget{
       child: TabBar(
         tabs: tabs,
         isScrollable: true,
-        indicatorColor: KamariatiColors.primary,
+        indicatorColor: dark ? KamariatiColors.light : KamariatiColors.primary,
         labelColor: dark ? KamariatiColors.white : KamariatiColors.primary,
         unselectedLabelColor: KamariatiColors.darkGrey,
       ),

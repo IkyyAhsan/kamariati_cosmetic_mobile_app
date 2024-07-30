@@ -109,8 +109,7 @@ class HomeScreenView extends GetView<HomeScreenController> {
                   KamariatiGridLayout(itemCount: 4, itemBuilder: (_, index) => const KamariatiProductCartVertical()),
                 ],
               ),
-            )
-            
+            ),
           ],
         ),
       ),

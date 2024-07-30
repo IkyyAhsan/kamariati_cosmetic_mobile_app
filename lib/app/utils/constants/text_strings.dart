@@ -96,6 +96,29 @@ class KamariatiTexts {
   static const String discountProductImage1 = "25%";
   static const String priceProductImage1 = "64.000";
 
+  // -- Profile Screen
+  static const String profileLogout = "Keluar";
 
+  static const String profileSuciAqilaName = "Suci Aqila";
+  static const String profileSuciAqilaEmail = "suciaqila256@gmail.com";
+
+  static const String profileAccountTitle = "Akun";
+  static const String profileAccountSetting = "Pengaturan Akun";
+  static const String profileMyAddressTitle = "Alamat saya";
+  static const String profileMyAddressSubtitle = "Tetapkan alamat pengiriman.";
+  static const String profileMyCartTitle = "Keranjang saya";
+  static const String profileMyCartSubtitle= "Menambah, menghapus, membayar.";
+  static const String profileMyOrdersTitle = "Pesanan saya";
+  static const String profileMyOrdersSubtitle= "Pesanan selesai dan sedang dikemas";
+  static const String profileMyCouponsTitle = "Kupon saya";
+  static const String profileMyCouponsSubtitle= "Daftar semua kupon diskon.";
+  static const String profileNotificationTitle = "Notifikasi";
+  static const String profileNotificationSubtitle = "Atur semua jenis pesan notifikasi.";
+  static const String profileInformation = "Informasi";
+
+  static const String profileWereContactTitle = "Hubungi kami";
+  static const String profileWereContactSubtitle = "Tim kami siap membantu anda.";
+  static const String profileAboutUsTitle = "Tentang kami";
+  static const String profileAboutUsSubtitle = "Kenali kami lebih dekat.";
 }
 
