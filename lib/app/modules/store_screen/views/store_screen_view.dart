@@ -2,6 +2,8 @@ import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kamariati_cosmetic_project/app/modules/all_brand_screen/views/all_brand_screen_view.dart';
+import 'package:kamariati_cosmetic_project/app/modules/bottom_navigation_screen/controllers/bottom_navigation_screen_controller.dart';
 import 'package:kamariati_cosmetic_project/app/modules/store_screen/controllers/store_screen_controller.dart';
 import 'package:kamariati_cosmetic_project/app/modules/store_screen/views/widgets/brand_card.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/appbar.dart';
@@ -31,10 +33,14 @@ class StoreScreenView extends GetView<StoreScreenController> {
               textStyle: Theme.of(context).textTheme.headlineMedium
             ),
           ),
-          actions: const [
-            Icon(
-              FluentIcons.cart_24_regular,
-              size: 30,
+          actions: [
+            IconButton(
+              onPressed: () {
+                 final bottomNavigationBarController = Get.put(BottomNavigationScreenController());
+                 bottomNavigationBarController.selectedIndex.value = 2;
+              },
+              icon: const Icon(FluentIcons.cart_24_regular), 
+              iconSize: 30
             ),
           ],
         ),
@@ -60,7 +66,7 @@ class StoreScreenView extends GetView<StoreScreenController> {
                       verticalSpace(KamariatiSizes.spaceBtwSections),
       
                       // Feature Brand
-                      KamariatiSectionHeading(title: KamariatiTexts.brandUnggulantitle, onPressed: (){}),
+                      KamariatiSectionHeading(title: KamariatiTexts.brandUnggulantitle, onPressed: () => Get.to(const AllBrandScreenView())),
                       verticalSpace(KamariatiSizes.spaceBtwItems / 1.5),
       
                       KamariatiGridLayout(itemCount: 4,mainAxisExtent: 80,  itemBuilder: (_, index){

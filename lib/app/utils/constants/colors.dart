@@ -49,6 +49,16 @@ class KamariatiColors {
   static const Color lightGrey = Color(0xFFF9F9F9);
   static const Color white = Color(0xFFFFFFFF);
 
+  // Product Colors
+  static const Color lipInkEnergyShot01 = Color(0xFFBC8A7E);
+  static const Color lipInkSmartCookie02 = Color(0xFFB66D6D);
+  static const Color lipInkHighRise03 = Color(0xFFB04A5A);
+  static const Color lipInkSpeedster04 = Color(0xFFB65A65);
+  static const Color lipInkSoulMover05 = Color(0xFFA45249);
+  static const Color lipInkHypedUp06 = Color(0xFFB43D26);
+  static const Color lipInkBusyBee07 = Color(0xFF823B34);
+  static const Color lipInkGoGetter08 = Color(0xFF9D2235);
+
 }
 
 

@@ -2,12 +2,15 @@ import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kamariati_cosmetic_project/app/modules/bottom_navigation_screen/controllers/bottom_navigation_screen_controller.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/appbar.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/curved_edges/primary_header_container.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/section_heading.dart';
+import 'package:kamariati_cosmetic_project/app/modules/order_history_screen/views/order_history_screen_view.dart';
 import 'package:kamariati_cosmetic_project/app/modules/profile_screen/views/widgets/full_profile.dart';
 import 'package:kamariati_cosmetic_project/app/modules/profile_screen/views/widgets/setting_menu_tile.dart';
 import 'package:kamariati_cosmetic_project/app/modules/profile_screen/views/widgets/user_profile_tile.dart';
+import 'package:kamariati_cosmetic_project/app/modules/user_address_screen/views/user_address_screen_view.dart';
 import 'package:kamariati_cosmetic_project/app/utils/constants/colors.dart';
 import 'package:kamariati_cosmetic_project/app/utils/constants/sizes.dart';
 import 'package:kamariati_cosmetic_project/app/utils/constants/spaces.dart';
@@ -63,7 +66,8 @@ class ProfileScreenView extends GetView<ProfileScreenController> {
                     icon: FluentIcons.location_24_regular, 
                     title: KamariatiTexts.profileMyAddressTitle, 
                     subtitle: KamariatiTexts.profileMyAddressSubtitle,
-                    onTap: (){},
+                    profileIcon: true,
+                    onTap: () => Get.to(() => const UserAddressScreenView()),
                   ),
 
                   // Keranjang Saya
@@ -71,7 +75,11 @@ class ProfileScreenView extends GetView<ProfileScreenController> {
                     icon: FluentIcons.cart_24_regular, 
                     title: KamariatiTexts.profileMyCartTitle, 
                     subtitle: KamariatiTexts.profileMyCartSubtitle,
-                    onTap: (){},
+                    profileIcon: true,
+                    onTap: () {
+                      final bottomNavigationBarController = Get.put(BottomNavigationScreenController());
+                      bottomNavigationBarController.selectedIndex.value = 2;
+                    },
                   ),
 
                   // Pesanan Saya
@@ -79,7 +87,8 @@ class ProfileScreenView extends GetView<ProfileScreenController> {
                     icon: FluentIcons.receipt_24_regular, 
                     title: KamariatiTexts.profileMyOrdersTitle, 
                     subtitle: KamariatiTexts.profileMyOrdersSubtitle,
-                    onTap: (){},
+                    profileIcon: true,
+                    onTap: () => Get.to(() => const OrderHistoryScreenView()),
                   ),
 
                   // Kupon Saya
@@ -87,6 +96,7 @@ class ProfileScreenView extends GetView<ProfileScreenController> {
                     icon: FluentIcons.tag_24_regular, 
                     title: KamariatiTexts.profileMyCouponsTitle, 
                     subtitle: KamariatiTexts.profileMyCouponsSubtitle,
+                    profileIcon: true,
                     onTap: (){},
                   ),
 
@@ -95,6 +105,7 @@ class ProfileScreenView extends GetView<ProfileScreenController> {
                     icon: FluentIcons.alert_24_regular, 
                     title: KamariatiTexts.profileNotificationTitle, 
                     subtitle: KamariatiTexts.profileNotificationSubtitle,
+                    profileIcon: true,
                     onTap: (){},
                   ),
 
@@ -112,6 +123,7 @@ class ProfileScreenView extends GetView<ProfileScreenController> {
                     icon: FluentIcons.people_24_regular, 
                     title: KamariatiTexts.profileWereContactTitle, 
                     subtitle: KamariatiTexts.profileWereContactSubtitle,
+                    profileIcon: true,
                     onTap: (){},
                   ),
 
@@ -120,6 +132,7 @@ class ProfileScreenView extends GetView<ProfileScreenController> {
                     icon: FluentIcons.info_24_regular, 
                     title: KamariatiTexts.profileAboutUsTitle, 
                     subtitle: KamariatiTexts.profileAboutUsSubtitle,
+                    profileIcon: true,
                     onTap: (){},
                   ),
 

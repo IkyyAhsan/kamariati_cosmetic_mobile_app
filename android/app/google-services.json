@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "430699561532",
+    "project_id": "kamariati-cosmetic-project",
+    "storage_bucket": "kamariati-cosmetic-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430699561532:android:48a210e5d9dd7ba727f939",
+        "android_client_info": {
+          "package_name": "com.examp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8Xy9IF0r1hUg2sfxi8IP3wprL4yf5Q5o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

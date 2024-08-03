@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:kamariati_cosmetic_project/app/modules/bottom_navigation_screen/views/bottom_navigation_screen_view.dart';
+import 'package:kamariati_cosmetic_project/app/modules/success_screen/views/success_screen_view.dart';
+import 'package:kamariati_cosmetic_project/app/utils/constants/colors.dart';
+import 'package:kamariati_cosmetic_project/app/utils/constants/image_strings.dart';
 
 class KamariatiHelperFunctions {
   static Color? getColor(String value) {
@@ -34,7 +39,24 @@ class KamariatiHelperFunctions {
       return Colors.teal;
     } else if (value == 'Indigo') {
       return Colors.indigo;
-    } else {
+    } else if (value == '01 Energy Shot'){
+      return KamariatiColors.lipInkEnergyShot01;
+    } else if (value == '02 Smart Cookie'){
+      return KamariatiColors.lipInkSmartCookie02;
+    } else if (value == '03 High Rise'){
+      return KamariatiColors.lipInkHighRise03;
+    } else if (value == '04 Speedster'){
+      return KamariatiColors.lipInkSpeedster04;
+    } else if (value == '05 Soul Mover'){
+      return KamariatiColors.lipInkSoulMover05;
+    } else if (value == '06 Hyped Up'){
+      return KamariatiColors.lipInkHypedUp06;
+    } else if (value == '07 Busy Bee'){
+      return KamariatiColors.lipInkBusyBee07;
+    } else if (value == '08 Go Getter'){
+      return KamariatiColors.lipInkGoGetter08;
+    }
+    else {
       return null;
     }
   }
@@ -109,5 +131,38 @@ class KamariatiHelperFunctions {
       wrappedList.add(Row(children: rowChildren));
     }
     return wrappedList;
+  }
+
+  static showConfirmationDialog(BuildContext context) {
+    Get.dialog(
+      AlertDialog(
+        title: Text('Konfirmasi Pembelian', style: GoogleFonts.plusJakartaSans(textStyle: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),),
+        content: Text('Apakah Anda yakin ingin membeli produk ini?', style: GoogleFonts.plusJakartaSans(textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400 )),),
+        actions: [
+          TextButton(
+            onPressed: () => Get.back(),
+            child: Text('Tidak', style: GoogleFonts.plusJakartaSans(textStyle: const TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w600
+            )),),
+          ),
+          TextButton(
+            onPressed: () {
+              Get.back();
+              Get.to(() => SuccessScreenView(
+                image: KamariatiImages.successfulPaymentIcon,
+                title: 'Pembayaran Berhasil!',
+                subtitle: 'Pesanan anda akan segera dikirimkan',
+                onPressed: () => Get.offAll(() => const BottomNavigationScreenView()),
+              ));
+            },
+            child: Text('Ya', style: GoogleFonts.plusJakartaSans(textStyle: const TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w600
+            )),),
+          ),
+        ],
+      ),
+    );
   }
 }

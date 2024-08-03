@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/vertical_image_text.dart';
+import 'package:kamariati_cosmetic_project/app/modules/sub_categories_screen/views/sub_categories_screen_view.dart';
 import 'package:kamariati_cosmetic_project/app/utils/constants/colors.dart';
 import 'package:kamariati_cosmetic_project/app/utils/constants/image_strings.dart';
 import 'package:kamariati_cosmetic_project/app/utils/constants/text_strings.dart';
@@ -24,7 +26,7 @@ class KamariatiHomeCategory extends StatelessWidget {
             image: KamariatiImages.kamariatiSkincareIcon, 
             textColor: dark ? KamariatiColors.light : KamariatiColors.dark, 
             title: KamariatiTexts.homeCategoryName1, 
-            onTap: (){},
+            onTap: () => Get.to(() => const SubCategoriesScreenView()),
           );
         },
         ),

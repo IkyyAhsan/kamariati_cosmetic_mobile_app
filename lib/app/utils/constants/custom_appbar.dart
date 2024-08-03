@@ -35,7 +35,7 @@ class KamariatiAppBarWidget extends StatelessWidget implements PreferredSizeWidg
           )
         ),
       ),
-      backgroundColor: dark ? KamariatiColors.primary : KamariatiColors.light,
+      backgroundColor: dark ? KamariatiColors.primary : KamariatiColors.white,
       centerTitle: true,
       elevation: 1.0,
       shadowColor: dark ? KamariatiColors.dark : KamariatiColors.dark,

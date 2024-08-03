@@ -14,6 +14,15 @@ abstract class Routes {
   static const CATEGORY_SCREEN = _Paths.STORE_SCREEN;
   static const CART_SCREEN = _Paths.CART_SCREEN;
   static const PROFILE_SCREEN = _Paths.PROFILE_SCREEN;
+  static const PRODUCT_DETAIL_SCREEN = _Paths.PRODUCT_DETAIL_SCREEN;
+  static const PRODUCT_REVIEW_SCREEN = _Paths.PRODUCT_REVIEW_SCREEN;
+  static const USER_ADDRESS_SCREEN = _Paths.USER_ADDRESS_SCREEN;
+  static const SUCCESS_SCREEN = _Paths.SUCCESS_SCREEN;
+  static const ORDER_HISTORY_SCREEN = _Paths.ORDER_HISTORY_SCREEN;
+  static const SUB_CATEGORIES_SCREEN = _Paths.SUB_CATEGORIES_SCREEN;
+  static const ALL_PRODUCT_SCREEN = _Paths.ALL_PRODUCT_SCREEN;
+  static const BRAND_SCREEN = _Paths.BRAND_SCREEN;
+  static const ALL_BRAND_SCREEN = _Paths.ALL_BRAND_SCREEN;
 }
 
 abstract class _Paths {
@@ -29,4 +38,13 @@ abstract class _Paths {
   static const STORE_SCREEN = '/store-screen';
   static const CART_SCREEN = '/cart-screen';
   static const PROFILE_SCREEN = '/profile-screen';
+  static const PRODUCT_DETAIL_SCREEN = '/product-detail-screen';
+  static const PRODUCT_REVIEW_SCREEN = '/product-review-screen';
+  static const USER_ADDRESS_SCREEN = '/user-address-screen';
+  static const SUCCESS_SCREEN = '/success-screen';
+  static const ORDER_HISTORY_SCREEN = '/order-history-screen';
+  static const SUB_CATEGORIES_SCREEN = '/sub-categories-screen';
+  static const ALL_PRODUCT_SCREEN = '/all-product-screen';
+  static const BRAND_SCREEN = '/brand-screen';
+  static const ALL_BRAND_SCREEN = '/all-brand-screen';
 }

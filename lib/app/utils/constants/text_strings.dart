@@ -100,7 +100,7 @@ class KamariatiTexts {
   static const String profileLogout = "Keluar";
 
   static const String profileSuciAqilaName = "Suci Aqila";
-  static const String profileSuciAqilaEmail = "suciaqila256@gmail.com";
+  static const String profileSuciAqilaEmail = "suciaqila166@gmail.com";
 
   static const String profileAccountTitle = "Akun";
   static const String profileAccountSetting = "Pengaturan Akun";

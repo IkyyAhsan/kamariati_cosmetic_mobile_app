@@ -2,7 +2,8 @@ import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kamariati_cosmetic_project/app/modules/cart_screen/views/cart_screen_view.dart';
+import 'package:kamariati_cosmetic_project/app/modules/all_product_screen/views/all_product_screen_view.dart';
+import 'package:kamariati_cosmetic_project/app/modules/bottom_navigation_screen/controllers/bottom_navigation_screen_controller.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/controllers/widgets/banner_controller.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/appbar.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/curved_edges/primary_header_container.dart';
@@ -52,7 +53,10 @@ class HomeScreenView extends GetView<HomeScreenController> {
                     ),
                     actions: [
                       IconButton(
-                        onPressed: () => Get.to(() => const CartScreenView()), 
+                        onPressed: () {
+                          final bottomNavigationBarController = Get.put(BottomNavigationScreenController());
+                          bottomNavigationBarController.selectedIndex.value = 2;
+                        },
                         icon: const Icon(
                           FluentIcons.cart_24_regular,
                           color: KamariatiColors.light,
@@ -104,7 +108,7 @@ class HomeScreenView extends GetView<HomeScreenController> {
               padding: const EdgeInsets.symmetric(horizontal: KamariatiSizes.defaultSpace),
               child: Column(
                 children: [
-                  KamariatiSectionHeading(title: KamariatiTexts.trendingProduct, showActionButton: true, onPressed: (){},),
+                  KamariatiSectionHeading(title: KamariatiTexts.trendingProduct, showActionButton: true, onPressed: () => Get.to(() => const AllProductScreenView()),),
                   verticalSpace(KamariatiSizes.inputFieldRadius),
                   KamariatiGridLayout(itemCount: 4, itemBuilder: (_, index) => const KamariatiProductCartVertical()),
                 ],

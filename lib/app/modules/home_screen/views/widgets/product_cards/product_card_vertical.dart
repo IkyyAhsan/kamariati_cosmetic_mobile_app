@@ -1,8 +1,10 @@
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/brand_title_text_with_verification_icon.dart';
 import 'package:kamariati_cosmetic_project/app/modules/home_screen/views/widgets/product_price_text.dart';
+import 'package:kamariati_cosmetic_project/app/modules/product_detail_screen/views/product_detail_screen_view.dart';
 import 'package:kamariati_cosmetic_project/app/utils/constants/colors.dart';
 import 'package:kamariati_cosmetic_project/app/utils/constants/image_strings.dart';
 import 'package:kamariati_cosmetic_project/app/utils/constants/product_title_text.dart';
@@ -20,7 +22,7 @@ class KamariatiProductCartVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = KamariatiHelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: (){},
+      onTap: () => Get.to(() => const ProductDetailScreenView()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -92,6 +94,8 @@ class KamariatiProductCartVertical extends StatelessWidget {
                         padding: EdgeInsets.only(left: KamariatiSizes.sm),
                         child: KamariatiProductPriceText(price: KamariatiTexts.priceProductImage1),
                       ),
+
+                      // Add to Cart Button
                       Container(
                         decoration: const BoxDecoration(
                           color: KamariatiColors.dark,

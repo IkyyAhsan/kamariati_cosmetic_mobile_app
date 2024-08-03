@@ -157,6 +157,7 @@ class KamariatiImages {
   static const String user = "assets/images/content/user.png";
 
   // -- Payment Methods
+  static const String shopeePay = "assets/icons/payment_methods/shopee-pay.png";
   static const String applePay = "assets/icons/payment_methods/apple-pay.png";
   static const String googlePay = "assets/icons/payment_methods/google-pay.png";
   static const String creditCard = "assets/icons/payment_methods/credit-card.png";
@@ -165,6 +166,6 @@ class KamariatiImages {
   static const String visa = "assets/icons/payment_methods/visa.png";
   static const String paystack = "assets/icons/payment_methods/paystack.png";
   static const String paytm = "assets/icons/payment_methods/paytm.png";
-  static const String successfulPaymentIcon = "assets/icons/payment_methods/successful_payment_icon.png";
+  static const String successfulPaymentIcon = "assets/icons/payment_methods/successful_payment_icon.json";
 }
 
