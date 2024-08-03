@@ -7,9 +7,9 @@ import 'package:kamariati_cosmetic_project/firebase_options.dart';
 import 'app/routes/app_pages.dart';
 
 Future<void> main() async {
-  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform).then(
-  //   (FirebaseApp value) => Get.put(AuthenticationRepository())
-  // );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform).then(
+    (FirebaseApp value) => Get.put(AuthenticationRepository())
+  );
   runApp(
     GetMaterialApp(
       title: KamariatiTexts.appName,
